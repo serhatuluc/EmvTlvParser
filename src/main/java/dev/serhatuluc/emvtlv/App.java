@@ -54,8 +54,9 @@ public class App extends Application {
             tagSourceLabel.setText("⚠ " + customTags.error());
         } else {
             tagSourceLabel.setText(EmvTagDictionary.NAMES.size() + " built-in EMVCo tags + "
-                    + customTags.tags().size() + " custom tag(s) loaded from: " + customTags.filePath()
-                    + " — to add or edit tags, open and edit this file manually.");
+                    + customTags.tags().size() + " custom tag(s) loaded from "
+                    + customTags.filePath().getFileName()
+                    + " (in the folder you launched this app from) — to add or edit tags, open and edit this file manually.");
         }
 
         HBox tagSourceBox = new HBox(10, tagSourceLabel);
