@@ -1,0 +1,130 @@
+.root {
+    -fx-base: #f4f6f8;
+    -fx-background-color: #f4f6f8;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+}
+
+.label {
+    -fx-text-fill: #1f2933;
+}
+
+.text-area.mono, .table-view.mono {
+    -fx-font-family: "Consolas", "Cascadia Mono", monospace;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+}
+
+.button {
+    -fx-background-color: #2f6fed;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2559c4;
+}
+
+.status-label {
+    -fx-font-weight: bold;
+    -fx-padding: 4 0 0 0;
+}
+
+.status-label.status-ok {
+    -fx-text-fill: #1a7f37;
+}
+
+.status-label.status-error {
+    -fx-text-fill: #c1272d;
+}
+
+.tag-source-box {
+    -fx-background-color: #eaf1ff;
+    -fx-background-radius: 6;
+    -fx-border-color: #b9d0f7;
+    -fx-border-radius: 6;
+    -fx-padding: 8 10 8 10;
+}
+
+.tag-source-box .label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #274a82;
+}
+
+.tag-source-box .button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #2f6fed;
+    -fx-border-color: #2f6fed;
+    -fx-border-radius: 6;
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 12px;
+}
+
+.tag-source-box .button:hover {
+    -fx-background-color: #eaf1ff;
+}
+
+.table-view {
+    -fx-background-radius: 8;
+    -fx-background-color: white;
+    -fx-border-color: #d7dce1;
+    -fx-border-radius: 8;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #e9edf1;
+    -fx-background-radius: 8 8 0 0;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fb;
+}
+
+.table-row-cell.row-unknown {
+    -fx-background-color: #d64545;
+}
+
+.table-row-cell.row-unknown .table-cell {
+    -fx-text-fill: white;
+}
+
+.table-row-cell.row-constructed .table-cell {
+    -fx-font-weight: bold;
+}
+
+/* Opening the row-detail dialog moves focus off the table, which switches selected rows into
+   JavaFX's "unfocused selected" state. That state keeps white cell text (inherited from the
+   focused-selected style) but falls back to a near-white background, making the text unreadable.
+   Give the unfocused-selected state its own visible background + dark text so it stays legible. */
+.table-row-cell:filled:selected {
+    -fx-background-color: #cfe0fb;
+}
+
+.table-row-cell:filled:selected .table-cell {
+    -fx-text-fill: #1f2933;
+}
+
+.table-row-cell:filled:focused:selected {
+    -fx-background-color: #2f6fed;
+}
+
+.table-row-cell:filled:focused:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+.table-row-cell.row-unknown:filled:selected {
+    -fx-background-color: #a52e2e;
+}
+
+.table-row-cell.row-unknown:filled:selected .table-cell {
+    -fx-text-fill: white;
+}
