@@ -72,7 +72,8 @@ mvn test
 
 ## Screenshot
 
-_(add a screenshot here)_
+<img width="1487" height="928" alt="image" src="https://github.com/user-attachments/assets/727144af-45fa-4da5-9099-0345ab11fb7c" />
+
 
 ## Not included
 
